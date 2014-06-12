@@ -1,8 +1,8 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Solution for Assignmnet 2:
+## Pair of functions to be used to calculate and cache the inverse of a matrix
 
-## Creates a special "matrix" that is in fact a list of functions 
-## to get and set the value and the inverse of the matrix
+## Creates a special "matrix" with a list of functions to get and set 
+## the matrix itself and its inverse
 makeCacheMatrix <- function(x = matrix()) {
     i <- NULL
     set <- function(y) {
@@ -18,8 +18,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Returns a matrix that is the inverse of 'x'. If the inverse of 'x' 
-## has already been calculated, then return the cached value
+## Returns the inverse matrix of 'x'. If the inverse of 'x' has already been
+## calculated, then return the cached value
 cacheSolve <- function(x, ...) {
     i <- x$getinverse()
     if(!is.null(i)) {
